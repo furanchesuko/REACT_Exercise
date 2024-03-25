@@ -1,10 +1,11 @@
 import { Counter } from "./Counter"
 
-export function CounterDisplay({ initialValue }) {
+export function CounterDisplay({ initialValue, count}) {
     return (
         <div>
             <h2>Valore iniziale {initialValue}</h2>
-            <Counter count={initialValue} />
+            <h2>Valore variato {count}</h2>
+            <Counter initialValue={initialValue} count={count}/>
         </div>
     )
 }
