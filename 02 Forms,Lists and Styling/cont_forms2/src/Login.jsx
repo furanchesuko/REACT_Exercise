@@ -1,6 +1,12 @@
 import { useState } from "react"
 
-export function Login() {
+function onLogin(){
+
+}
+
+onLogin()
+
+export function Login({}) {
     //imposto valori di default e check di default
     const [data, setData] = useState({
         username: '',
@@ -25,12 +31,13 @@ export function Login() {
         })
     }
 
+
     return (
         <div>
             <input name="username" type="text" value={data.username} onChange={handleInputs} placeholder="username" />
             <input name="password" type="password" value={data.password} onChange={handleInputs} placeholder="password" />
             <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputs} />
-            <button disabled={!data.username || !data.password}>Login</button>
+            <button disabled={!data.username || !data.password} onClick={onLogin}>Login</button>
 
             {/*    <pre>
                 {JSON.stringify(data, null, 2)}
