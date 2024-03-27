@@ -33,6 +33,14 @@ export function Login({ onLogin }) {
         console.log(JSON.stringify(data, null, 2))
     }
 
+    //funzione per resettare input
+    function handleResetInput() {
+        setData({
+            username: '',
+            password: '',
+            remember: '',
+        })
+    }
 
     return (
         <div>
@@ -40,6 +48,7 @@ export function Login({ onLogin }) {
             <input name="password" type="password" value={data.password} onChange={handleInputs} placeholder="password" />
             <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputs} />
             <button disabled={!data.username || !data.password} onClick={onLogin}>Login</button>
+            <button onClick={handleResetInput}>Reset</button>
         </div>
     )
 }
