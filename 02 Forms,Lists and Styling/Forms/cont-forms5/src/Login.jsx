@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export function Login({ onLogin }) {
+export function Login({ handleLogin }) {
 
     //imposto valori di default e check di default
     const [data, setData] = useState({
@@ -28,7 +28,7 @@ export function Login({ onLogin }) {
     }
 
     //funzione per stampare state aggiornato
-    function onLogin(e) {
+    function handleLogin(e) {
         //previene uso di default del form
         e.preventDefault();
         //stampa in console nuovo data in formato json
@@ -46,11 +46,11 @@ export function Login({ onLogin }) {
 
     return (
         <div>
-            <form name="form" type="submit" onSubmit={onLogin}>
+            <form name="form" type="submit" onSubmit={handleLogin}>
                 <input name="username" type="text" value={data.username} onChange={handleInputs} placeholder="username" />
                 <input name="password" type="password" value={data.password} onChange={handleInputs} placeholder="password" />
                 <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputs} />
-                <button disabled={!data.username || !data.password} /* onClick={onLogin} */>Login</button>
+                <button disabled={!data.username || !data.password} /* onClick={handleLogin} */>Login</button>
                 <button onClick={handleResetInput}>Reset</button>
             </form>
         </div>

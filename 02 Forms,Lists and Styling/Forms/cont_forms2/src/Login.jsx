@@ -1,7 +1,5 @@
 import { useState } from "react"
 
-
-
 export function Login({ onLogin }) {
 
     //imposto valori di default e check di default
@@ -13,16 +11,18 @@ export function Login({ onLogin }) {
 
     //funzione per gestire eventi negli input
     function handleInputs(event) {
+
         //variabili di target
         const name = event.target.name;
         const value = event.target.value;
 
-        const checked = event.target.checked
-        const type = event.target.type
+        const checked = event.target.checked;
+        const type = event.target.type;
+
         //al succedere dell evento restituisce tupla con valori inseriti negli input
-        setData((d) => {
+        setData((dataCopy) => {
             return {
-                ...d,
+                ...dataCopy,
                 [name]: type === 'checkbox' ? checked : value,
             }
         })

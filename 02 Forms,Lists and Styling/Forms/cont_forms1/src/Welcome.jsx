@@ -1,7 +1,7 @@
 export function Welcome({ name }) {
     return (
         <div>
-            <p>{name}</p>
+            <h1>{name}</h1>
         </div>
     )
 }
