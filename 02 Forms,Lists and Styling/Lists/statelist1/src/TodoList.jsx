@@ -10,13 +10,15 @@ export function TodoList() {
         setInputValue('');
     }
 
-    function handleResetTodo(){
+    function handleResetTodo() {
         setTodos([])
     }
 
-  /*   function handleRemoveTodo(){
-        setTodos(todo => todo.remove);
-    } */
+    function handleRemoveTodo(index) {
+        const arrCopy = [...todos]
+        arrCopy.splice(index, 1)
+        setTodos(arrCopy);
+    }
 
     return (
         <div>

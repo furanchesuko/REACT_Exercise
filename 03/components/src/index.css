@@ -1,0 +1,8 @@
+.container-bg {
+  background-color: white;
+  border: red solid 2px
+}
+
+.app-content-hidden{
+  display: none;
+}
