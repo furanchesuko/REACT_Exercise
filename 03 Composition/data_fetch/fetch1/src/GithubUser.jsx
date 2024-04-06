@@ -23,6 +23,7 @@ export function GithubUser({ username }) {
             {data && <h1>Username: <span className="username">{data.name}</span></h1>}
             {data && <h2>Login: <span className="login">{data.login}</span></h2>}
             {data && <h3>Avatar: <img className="avatar" src={data.avatar_url}></img></h3>}
+            {data && <h4>Link: <a className="link" href={data.html_url}>Link al profilo</a></h4>}
         </div>
     )
 }
