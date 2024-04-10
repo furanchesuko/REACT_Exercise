@@ -1,11 +1,10 @@
-import { Welcome } from "./Welcome";
+import { Counter } from "./Counter"
 import { Routes, Route } from "react-router-dom";
-
 
 export function App() {
     return (
-        <Routes >
-            <Route path="/" element={<Welcome name="Francesco" age={29} />}/>
-        </Routes>
+            <Routes>
+                <Route path="/counter" element={<Counter />}></Route>
+            </Routes>
     )
 }
