@@ -5,10 +5,10 @@ export function Counter({ initialValue = 0 }) {
 
     return (
         <div>
-            <p >The value of the counter is {counter}</p>
-            <button  onClick={onIncrement}>Increment</button>
-            <button  onClick={onDecrement}>Decrement</button>
-            <button  onClick={onReset}>Reset</button>
+            <p>The value of the counter is {counter}</p>
+            <button onClick={onIncrement}>Increment</button>
+            <button onClick={onDecrement}>Decrement</button>
+            <button onClick={onReset}>Reset</button>
         </div>
     )
 }

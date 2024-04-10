@@ -40,6 +40,8 @@ export function App() {
         </div>
       } />
 
+      <Route path="*" element={<b><p>Not Found!</p></b>} />
+
     </Routes >
   )
 }
