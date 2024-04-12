@@ -4,7 +4,7 @@ export function App() {
 
   return (
     <>
-      <GithubUser username={"furanchesuko"}/>
+      <GithubUser />
     </>
   )
 }

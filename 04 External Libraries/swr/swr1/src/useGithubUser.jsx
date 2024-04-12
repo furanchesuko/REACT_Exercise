@@ -1,16 +1,15 @@
-import useSWR, {mutate} from 'swr';
+import useSWR, { mutate } from 'swr';
 
 function fetcher(url) {
   return fetch(url).then(res => res.json());
 }
 
 export function useGithubUser(username) {
-    const fetchGithubUser = username ? () => `https://api.github.com/users/${username}` : null;
-    const { data, error } = useSWR(fetchGithubUser, fetcher);
+  const { data, error, mutate } = useSWR((username ? `https://api.github.com/users/${username}` : null), fetcher);
 
-    function refreshUser () {
-        mutate()
-    }
+  function refreshUser() {
+    mutate();
+  }
 
-    return { data, error, onFetchUser: fetchGithubUser, refreshUser };
+  return { data, error, refreshUser };
 }
