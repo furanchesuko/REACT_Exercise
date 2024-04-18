@@ -1,0 +1,117 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #87b1bc;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(255, 232, 161);
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px black;
+}
+
+.username {
+  color: green;
+}
+
+.login {
+  color: rgb(69, 170, 252);
+}
+
+.link {
+  color: rgb(129, 0, 129);
+}
+
+a {
+  color: rgb(129, 0, 129);
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 100%;
+  width: 100px;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 30px;
+}
+
+.ul-container {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px black;
+  padding: 20px
+}
+
+.page-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding:0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
