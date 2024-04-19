@@ -1,3 +1,4 @@
+//GithubUser.jsx
 import { useEffect, useState } from "react"
 
 export function GithubUser({ username }) {

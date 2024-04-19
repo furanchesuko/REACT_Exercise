@@ -5,43 +5,43 @@ import { Counter } from "../../rout2/src/Counter"
 
 export function App() {
   return (
-    <Routes className="container-all" >
+    <Routes >
+  
+        <Route path="/" element={
+          <div className="welcome-container">
+            <Welcome name="Francesco" age={29} />
+            <ul>
+              <li><Link to="/">Welcome</Link></li>
+              <li><Link to="/counter">Counter</Link></li>
+              <li><Link to="/users/:username">GitHub data</Link></li>
+            </ul>
+          </div>
+        } />
 
-      <Route path="/" element={
-        <div>
-          <Welcome name="Francesco" age={29} />
-          <ul>
-            <li><Link to="/">Welcome</Link></li>
-            <li><Link to="/counter">Counter</Link></li>
-            <li><Link to="/users/:username">GitHub data</Link></li>
-          </ul>
-        </div>
-      } />
+        <Route path="/counter" element={
+          <div>
+            <Counter />
+            <ul>
+              <li><Link to="/">Welcome</Link></li>
+              <li><Link to="/counter">Counter</Link></li>
+              <li><Link to="/users/:username">GitHub data</Link></li>
+            </ul>
+          </div>
+        } />
 
-      <Route path="/counter" element={
-        <div>
-          <Counter />
-          <ul>
-            <li><Link to="/">Welcome</Link></li>
-            <li><Link to="/counter">Counter</Link></li>
-            <li><Link to="/users/:username">GitHub data</Link></li>
-          </ul>
-        </div>
-      } />
+        <Route path="/users/:username" element={
+          <div>
+            <ShowGithubUsers />
+            <ul>
+              <li><Link to="/">Welcome</Link></li>
+              <li><Link to="/counter">Counter</Link></li>
+              <li><Link to="/users/:username">GitHub data</Link></li>
+            </ul>
+          </div>
+        } />
 
-      <Route path="/users/:username" element={
-        <div>
-          <ShowGithubUsers />
-          <ul>
-            <li><Link to="/">Welcome</Link></li>
-            <li><Link to="/counter">Counter</Link></li>
-            <li><Link to="/users/:username">GitHub data</Link></li>
-          </ul>
-        </div>
-      } />
-
-      <Route path="*" element={<b><p>Not Found!</p></b>} />
-
+        <Route path="*" element={<b><p>Not Found!</p></b>} />
+     
     </Routes >
   )
 }

@@ -1,8 +1,9 @@
 import { Routes, Route, Link } from "react-router-dom"
 import { ShowGithubUsers } from "./ShowGithubUsers"
+import { GithubUserList } from "./GithubUserList";
 import { Welcome } from "../../rout1/src/Welcome"
 import { Counter } from "../../rout2/src/Counter"
-import { GithubUserList } from "./GithubUserList";
+
 
 export function App() {
   return (
@@ -30,7 +31,7 @@ export function App() {
           </div>
         } />
 
-        <Route path="/users" element={
+        <Route path="/users/*" element={
           <div>
             <GithubUserList />
             <ul className="page-link">
